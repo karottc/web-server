@@ -170,6 +170,7 @@ Check_Resource(struct ReqInfo *reqInfo)
 {
 	strcat(server_root,reqInfo->resource);
 /*	strcat(server_root,"/index.html");  */
+    // 这里或许用access这个系统调用会更好。
 	return open(server_root,O_RDONLY);
 }
 
